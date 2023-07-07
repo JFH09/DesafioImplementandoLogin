@@ -1,0 +1,43 @@
+<div class=" row" style="width: 100%;">
+    <nav class="menuLateral mt-3 col-3">
+      <!-- <div>
+          <app-logo></app-logo>
+        </div> -->
+      <div class="contenidoNav">
+        <div class="card mb-3 cardPerfil">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="img-fluid rounded-start pt-2 pl-5 "
+                alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Usuario:<span id="userName">{{user.name}}</span></h5>
+                <p class="card-text mb-0">Rol: {{user.rol}}</p>
+                <p class="card-text mb-0">Email: <span id="userEmail">{{user.email}}</p>
+              </div>
+              
+            </div>
+          </div>
+          <button id="btnCerrarSesion" class="btn btn-danger">Cerrar Sesión</button>
+        </div>
+      </div>
+      <div class="paginas">
+        {{!-- <app-listado-paginas></app-listado-paginas> --}}
+      </div>
+  </nav>
+  <div class="container col-9">
+      <div class="row">
+          <h1 style="text-align: center; padding-top: 12px;">Lista de productos</h1>
+          <button class="btn btn-success m-1" onclick="agregarProducto()">Agregar Producto</button>
+      </div>
+      <div id="listaProductos" class="row" style="justify-content: center;" >
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center" id="botones">
+              
+      </div>
+  </div>
+</div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>
